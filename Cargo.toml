@@ -1,0 +1,19 @@
+[package]
+name = "run"
+version = "0.1.0"
+authors = ["khoidang <khoidang@umich.edu>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rand = "0.6.0"
+ndarray = {version = "0.13.1",features=["rayon","blas"]} #, features = ["blas","rayon"]}
+#blas = "0.20.0"
+ndarray-linalg = {version = "0.12.1", features = ["netlib"]} 
+# ^ was features = openblas before
+rayon = "1.5.0"
+GSL = "1.1.0"
+
+[profile.dev]
+opt-level = 3
